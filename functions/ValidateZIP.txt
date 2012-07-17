@@ -1,0 +1,52 @@
+function validateForm() {
+    zipValue = document.form.zip.value;
+    if (isZipcode(zipValue)) {
+        document.form.submit();
+    } else {
+        alert("To proceed please enter a valid ZIP Code.");
+        return false
+    }
+}
+ 
+function isZipcode(value) {
+    var exp_zipcode = /^[0-9]{5}$/;
+    return exp_zipcode.test(value);
+}
+ 
+function validateCurrentForm(currentForm) {
+    var elementsInputs;
+    elementsInputs = currentForm.getElementsByTagName("input");
+    for (var intCounter = 0; intCounter < elementsInputs.length; intCounter++) {
+        if (elementsInputs[intCounter].name == "ZipZip") {
+            if (!(isZipcode(elementsInputs[intCounter].value))) {
+                alert("To proceed please enter a valid ZIP Code.");
+                elementsInputs[intCounter].focus();
+                return false;
+            }
+        }
+    }
+    return true;
+}
+ 
+function clearZipValue(zipInput) {
+    if (isZipcode(zipInput.value)) {
+        zipInput.select();
+    } else {
+        zipInput.value = '';
+    }
+}
+ 
+function getZipValue(zipInput) {
+    if (!isZipcode(zipInput.value)) {
+        zipInput.value = "ZIP Code...";
+    }
+}
+ 
+function validateHomeForm(form) {
+    if (!isZipcode(form.zip.value)) {
+        alert("To proceed please enter a valid ZIP Code.");
+        form.zip.focus();
+        return false;
+    }
+    return true;
+}

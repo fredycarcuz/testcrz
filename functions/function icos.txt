@@ -1,0 +1,28 @@
+var fnd = new Array();
+var cnt = new Array();
+cnt=document.getElementsByClassName('bw-logos-sb');
+for (i=0;i<=cnt.length;i++)
+{
+	fnd=document.getElementsByClassName('bw-logos-sb')[i].childNodes.length;
+	if (fnd<=6) {
+	document.getElementsByClassName('bw-logos-sb')[i].innerHTML="<img src=\"./img/home.png \">";		
+	}
+}
+
+
+
+
+
+function addIcon(){
+
+for (i=0;i<=document.getElementsByClassName('bw-logos-sb').length;i++)
+{
+	fnd=document.getElementsByClassName('bw-logos-sb')[i].childNodes.length;
+	if (fnd>6) {
+	str=document.getElementsByClassName('bw-logos-sb')[i].innerHTML;
+	document.getElementsByClassName('bw-logos-sb')[i].innerHTML="<span style=\"font-size: 12px; margin-left: 2px; font-weight: bold;\">Special Rates for:</span><br/>"+str;	
+	}
+}
+}
+
+addIcon();

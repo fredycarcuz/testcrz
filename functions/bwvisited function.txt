@@ -1,0 +1,20 @@
+$('.jbwapsListingWrapper a').click(function(){
+                $(this).parents('.jbwapsListingWrapper').addClass('bwvisited'); 
+                });
+
+
+
+$('.bwapslistingContainer a').click(function(){
+$(this).parents('.bwapsListListings').addClass('bwvisited'); 
+});
+
+
+
+**************************************************
+
+$('.bwapslistingContainer a').click(function(){
+$(this).parents('#liquid-round').addClass('bwvisited'); 
+});
+
+
+*************************************************

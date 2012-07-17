@@ -1,0 +1,48 @@
+?prodid=505
+&st=CA
+&mortgagecreditscore=4
+&mortgageloantovalue=65
+&mortgageloanamount=175000
+
+
+
+?prodid=505&st=CA&mortgagecreditscore=4&mortgageloantovalue=65&mortgageloanamount=175000
+?prodid=505&st=CA&mortgagecreditscore=4&mortgageloantovalue=65&mortgageloanamount=175000&Mortgageproductid=15
+
+
+
+/*Loan Term nad Type*/
+$('.bwtt span').hide();
+$('#refineresults form fieldset').css('height',$('#refineresults form fieldset').height()-65+"px");
+$('#ttfr').click(function(){$('#ttfr span').toggle(,,$('#refineresults form fieldset').css('height',$('#refineresults form fieldset').height()+50+"px");); });
+$('#ttaj').click(function(){$('#ttaj span').toggle();});
+$('#ttb').click(function(){$('#ttb span').toggle();});
+/************/
+
+
+
+
+
+
+
+
+
+
+
+function SelectedItem(sender){
+    var prod = $("#Mortgageproductid option:selected").attr('value');
+    var state = $("#state_list option:selected").attr('value'); 
+    var eleg_check = $("#elegible input:checked").attr('value');
+    var location_string='', product_string='';  var elegible_string=''; var source_string='';
+       
+    var Url = location.href;
+    Url = Url.replace(/.*\?(.*?)/,"$1");
+    var Variables = Url.split ("&");
+    var strExtra='';
+    for (i = 0; i < Variables.length; i++) {
+       Separ = Variables[i].split("=");
+       var str = new String(Separ[0]);          
+       if ((str != 'senior')&&(str != 'elegible')&&(str!='st')&&(str!='state')&&(str!='zip') ){            
+               strExtra +='&'+Separ[0]+'='+Separ[1];               
+       }
+    }

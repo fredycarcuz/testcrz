@@ -1,0 +1,36 @@
+$sql = array(); 
+foreach( $data as $row ) {
+    $sql[] = '("'.mysql_real_escape_string($row['text']).'", '.$row['category_id'].')';
+}
+mysql_query('INSERT INTO table (text, category) VALUES '.implode(',', $sql));
+
+
+
+
+
+bac  #F3F3F3
+
+solid 1px #D9D9D9
+
+
+
+drop table IF EXISTS REQUEST_ITEMS;
+drop table IF EXISTS REQUEST;
+
+Create table REQUEST (
+	ID_REQUEST Int NOT NULL,
+	DESCRIPTION Char(20),
+ Primary Key (ID_REQUEST)) ENGINE = MyISAM;
+
+Create table REQUEST_ITEMS (
+	ID Int NOT NULL AUTO_INCREMENT,
+	ID_ELEMENT Char(20),
+ Primary Key (ID)) ENGINE = MyISAM;
+
+Create table Entity10 (
+	ID_REQUEST Int NOT NULL,
+	ID Int NOT NULL,
+ Primary Key (ID_REQUEST,ID)) ENGINE = MyISAM;
+
+Alter table Entity10 add Foreign Key (ID_REQUEST) references REQUEST (ID_REQUEST) on delete  restrict on update  restrict;
+Alter table Entity10 add Foreign Key (ID) references REQUEST_ITEMS (ID) on delete  restrict on update  restrict;

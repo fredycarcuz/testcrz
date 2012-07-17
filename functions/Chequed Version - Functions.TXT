@@ -1,0 +1,11 @@
+ /* checked version */
+function findParentNode(parentName, childObj,classname) {
+//PARAMETERS: super parent, the element, class name
+var testObj = childObj.parentNode;    var count = 1;
+    while(testObj.getAttribute('name') != parentName) {
+    testObj = testObj.parentNode; count++;
+    }
+testObj.className += ' '+classname;
+}
+function chq(element){ findParentNode ('jListing',element,'visited');} 
+/* //checked version */

@@ -1,0 +1,38 @@
+$('.bwapsListListings > li').fadeTo('slow',0.5);
+
+$('.bwapsListListings > li').hover(function(){
+	$(this).fadeTo('slow',1.0);
+	}
+,
+function(){
+	/*$(this).fadeTo('slow',0.5);*/
+	$(this).find('.bwapsListingDestinationUrl').fadeTo('slow',0.5);
+	$(this).find('.bwapsListingSnippet').fadeTo('slow',0.5);
+	$(this).find('.bwapstitle').fadeTo('slow',0.5);
+	$(this).find('.bwapsListingGetQuotes').fadeTo('slow',1.0);
+	$(this).find('.bwapsListingDomainLogo').fadeTo('slow',1.0);
+	}
+);
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+<script language="JavaScript"    type="text/Javascript">
+($('.MatchingTable tr')).each(function(i){
+$(this).prepend($('<td class="Nmbr"> <div class="bulletNmbr">'+(i+1)+'</div></td>'))
+});
+/*
+$('.buttonCell a').click(function(){
+bwparent=$(this).parent().parent();
+bwparent.find('.ClickPartnerLogo').css('opacity','0.4');
+bwparent.find('.ClickPartnerTitle').css('color','#CCC !important');
+bwparent.find('.contentCell').css('color','#CCC');
+bwparent.find('.buttonCell').css('width','135px');
+bwparent.find('.buttonCell .ClickPartnerLink').css('width','135px');
+bwparent.find('.buttonCell .ClickPartnerLink').css('background','url(https://cdn.bwserver.net/images/checked-version-nobg.png) 0 0 no-repeat !important');
+return true;
+});
+*/
+</script>

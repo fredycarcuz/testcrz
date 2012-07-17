@@ -1,0 +1,9 @@
+$('.bwapsListingGetQuotes')
+
+
+$('<input type="text" value=""/><input type="button" value="Go"/>');
+
+
+$('.bwapsListingGetQuotes').append($('<input type="text" value="" id="bwzipcode" style="width:50px;"/><input type="button" value="Go"/>'));
+$('#bwzipcode').text()=bwapszip;
+$('.bwapsListingGetQuotes a').css('background','none');

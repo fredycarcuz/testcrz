@@ -1,0 +1,29 @@
+//eliminar hoja de estilos
+
+var hojas=document.getElementsByTagName("link");
+hojas[2].href="https://cdn.bwserver.net/10200/10257/css/default2.css";
+document.write(unescape('<link rel="stylesheet" href="https://cdn.bwserver.net/10200/10257/css/styles-vert.css" /><div id="bwContent">'));
+
+
+
+
+// enviaa a serp o a pagina
+
+function gotomi(){
+var index=document.bwform.st.value;
+	if(index == "AK" || index == "AL" || index == "AR" ){ document.bwform.action="http://www.bwserver.net/11500/11536/results.html?st="+index;
+	}else{document.bwform.action="http://medicarequote4u.com/"}
+	
+}
+
+
+
+
+//refrescar una pagina desde un iframe
+
+function bwlocation(){
+parent.location=".html"
+}
+
+
+onClick="bwlocation();"

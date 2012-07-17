@@ -1,0 +1,41 @@
+
+jListingsTemplate += '           <tbody>';
+jListingsTemplate += '           {{#ilistings}}';
+jListingsTemplate += '<tr class="jbwapsListingWrapper ">';
+jListingsTemplate += '	<td class="jDomainLogo RLEFT" valign="top">';
+jListingsTemplate += '	<div class="newTopLeft"></div>';
+jListingsTemplate += '	<div class="jDomainName"></div>';
+jListingsTemplate += '		<a class="jLink" href="{{#link}}{{href}}{{/link}}">';
+jListingsTemplate += '		<img class="jListingLogo" alt="" src="{{domainLogoUrl}}"/></a></td>';
+jListingsTemplate += '		<td class="jOnlineApp RBOTTOM" valign="top">{{onlineApplication}}</td>';
+jListingsTemplate += '		<td class="jQuoting RBOTTOM"  valign="top" >{{onlineQuoting}}</td>';
+jListingsTemplate += '		<td class="jDescription RRIGHT" align="right">';
+jListingsTemplate += '		<div class="newTopRight">';
+jListingsTemplate += '		</div>';
+jListingsTemplate += '	<div class="jDescriptionContainer">';
+jListingsTemplate += '	<div class="bwapstitle"><a class="jLink" href="{{#link}}{{href}}{{/link}}"><span class="jTitle">{{{title}}}</span></a>';
+jListingsTemplate += '	</div>';
+jListingsTemplate += '	<div class="bwapsListingSnippet"><div class="jListingSnippet">';
+jListingsTemplate += '		</div>{{{snippet}}}</div>';
+jListingsTemplate += '		<div class="bwapsListingDestinationUrl"><a class="jLink" href="{{#link}}{{href}}{{/link}}"><span class="jUrl">{{domainUrl}}';jListingsTemplate += '</span></a>';
+jListingsTemplate += '		</div>';
+jListingsTemplate += '		<div class="bwapsListingGetQuotes"><a class="jLink" href="{{#link}}{{href}}{{/link}}"></a>';
+jListingsTemplate += '		</div>';
+jListingsTemplate += '	</div>';
+jListingsTemplate += '</td>';
+jListingsTemplate += '</tr>';
+jListingsTemplate += '{{/ilistings}}</tbody>';
+
+
+
+
+
+            jListingsTemplate += '            <tr class="bluebar">';
+            jListingsTemplate += '              <td></td><th colspan="4" class="filters headerlabel" align="left" style="padding-left:60px;">Filter by:';
+            jListingsTemplate += '              Online Application<select name="onlineapp" id="onlineapp" onchange="msg(this)" style="margin-left: 8px;"><option>-</option><option value="All">All</option><option value="Yes">Yes</option><option value="No">No</option></select>';
+            jListingsTemplate += '              Online Quote<select name="onlinequote" id="onlinequote" onchange="msg(this)" style="margin-left: 12px;"><option>-</option><option value="All">All</option><option value="Yes">Yes</option><option value="No">No</option></select>';          
+            jListingsTemplate += '              </th> </tr>'; 
+
+$(function(){
+$('.jbwapsListingWrapper a').click(function(){$(this).parents('.jbwapsListingWrapper').addClass('bwvisited2');});            
+});
